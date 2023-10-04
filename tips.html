@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <title>Tips Page</title>
+<body>
+    <header>Tips of Laxminarayana Yadav Pakanati</header>
+<h2>Getting input</h2>
+
+<form>
+    <label for="Amount">Enter base amount</label>
+    <input type ="number" id="Amount" name="Amount" value=50> <br>
+
+    <label for="Percent">Enter the tip percent </label>
+    <input type ="number" id="Percent" name="Percent" value=15> <br>
+
+    <input type="button" onclick="tips()" value="Show tip">
+</form>
+
+
+<p id="result">Total Tip </p>
+
+<script> 
+
+function tips (){
+    let myOutput=""
+    console.log("Getting form values")
+    amount = parseFloat(document.getElementById("Amount").value)
+    percent = parseFloat(document.getElementById("Percent").value)
+    let toShow = '';
+            for (let i = 0; i < 5; i++) {
+                const calculatedTip = (amount * (percent + i * 4)) / 100;
+                toShow += `${percent + i * 4}% is ${calculatedTip.toFixed(2)}; `;
+                console.log(toShow)
+            }
+            document.getElementById('result').innerHTML = 'Tips are: ' + toShow;
+        }
+</script>
+</body>
+</html> 
