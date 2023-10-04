@@ -14,10 +14,19 @@
 
     <input type="button" onclick="tips()" value="Show tip">
 </form>
-
-
 <p id="result">Total Tip </p>
 
+<form>
+    <input type="radio" id="sum" value="sum" name="calculation" onclick="chooseOp()">
+    <label for="sum">sum</label></br>
+  
+    <input type="radio" id="diff" value="diff" name="calculation" onclick="chooseOp()">
+    <label for="diff">diff</label></br>
+  
+    <input type="radio" id="mult" value="mult" name="calculation" onclick="chooseOp()">
+    <label for="mult">mult</label></br>
+  </form>
+  <p id="Total">Calculation </p>
 <script> 
 
 function tips (){
@@ -32,6 +41,35 @@ function tips (){
                 console.log(toShow)
             }
             document.getElementById('result').innerHTML = 'Tips are: ' + toShow;
+        }
+function chooseOp(){
+            amount = parseFloat(document.getElementById('Amount').value);
+            percentage = parseFloat(document.getElementById('Percent').value);
+            operationRadios = document.getElementsByName('calculation');
+            let selectedOperation
+            for (const radio of operationRadios) {
+                if (radio.checked) {
+                    selectedOperation = radio.value
+                    break;
+                }
+            }
+            console.log(selectedOperation)
+            let resultText
+            switch (selectedOperation) {
+                case 'sum':
+                    resultText = `Sum of ${amount} and ${percentage} is ${amount + percentage}`
+                    break;
+                case 'diff':
+                    resultText = `Difference between ${amount} and ${percentage} is ${amount - percentage}`
+                    break;
+                case 'mult':
+                    resultText = `Product of ${amount} and ${percentage} is ${amount * percentage}`
+                    break;
+                default:
+                    break;
+            }
+            console.log(resultText)
+            document.getElementById('Total').innerHTML = resultText;
         }
 </script>
 </body>
