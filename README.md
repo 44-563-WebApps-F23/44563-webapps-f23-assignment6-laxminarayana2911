@@ -3,5 +3,9 @@
 Introduction to Java Script and DOM
 Hosted Links:
 https://44-563-webapps-f23.github.io/44563-webapps-f23-assignment6-laxminarayana2911/author.html
+<br>
+Hosted Links:
 https://44-563-webapps-f23.github.io/44563-webapps-f23-assignment6-laxminarayana2911/tips.html
+<br>
+Hosted Links:
 https://44-563-webapps-f23.github.io/44563-webapps-f23-assignment6-laxminarayana2911/cruise.html
