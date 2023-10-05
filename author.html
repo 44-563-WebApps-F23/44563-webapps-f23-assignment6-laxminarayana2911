@@ -30,7 +30,11 @@ function checkAuthor (){
     if(confirmed){
         good=good+1
         alert("You got it right")
-    } else {
+    }
+    else if(oops==7){
+        alert("Sorry, ran out of guesses.")
+    } 
+    else {
         oops=oops+1
         alert("Sorry")
     }
