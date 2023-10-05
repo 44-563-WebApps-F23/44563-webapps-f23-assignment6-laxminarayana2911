@@ -1,6 +1,11 @@
 <!DOCTYPE html>
 <html>
-    <title>Goes on a cruise</title>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <title>Goes on a cruise</title>   
+    </head>
 <body>
     <header>Goes on a cruise Laxminarayana Yadav Pakanati</header>
 <h2>Getting input</h2>
@@ -14,7 +19,7 @@
     <input type="checkbox" id="Pool_Pass" name="Pool_Pass" value="False">
     <label for="Pool_Pass">Pool Pass</label></br>
 
-    <input type="button" onclick="selectCruise()" value="Select a cruise">
+    <input class="btn btn-primary mt-3" type="button" onclick="selectCruise()" value="Select a cruise">
   </form>
 <p id="result">This text will be replaced </p>
 
@@ -24,7 +29,7 @@
 
         <label for="priceInput">Enter price:</label>
         <input type="text" id="price" value="1000"></br>
-    <input type="button" onclick="updateCruise()" value="Update the cruise">
+    <input class="btn btn-primary mt-3" type="button" onclick="updateCruise()" value="Update the cruise">
   </form>
 <p id="updated_Cruise">This text will be replaced </p>
 <script> 
@@ -47,6 +52,7 @@
         document.getElementById('updated_Cruise').innerHTML = JSON.stringify(Duration_Cruise);
     }
 </script>
-
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html> 
